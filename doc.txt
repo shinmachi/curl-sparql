@@ -1,0 +1,13 @@
+doc.txt
+
+$ curl -H 'Accept: application/sparql-results+json' --data-urlencode 'query@-' http://dbpedia.org/sparql < sparql.rq
+
+$ curl -H 'Accept: application/sparql-results+json' --data-urlencode 'query@sparql.rq' http://dbpedia.org/sparql
+
+$ curl -H 'Accept: application/sparql-results+json' --data-urlencode 'query@-' http://dbpedia.org/sparql < construct.rq
+
+curl http://wdqs-beta.wmflabs.org/bigdata/namespace/wdq/sparql?query=select%20distinct%20%3Ftype%20where%20%7B%0A%3Fthing%20a%20%3Ftype%0A%7D%0Alimit%2020 -H "Accept: text/csv"
+
+
+curl -H 'Accept: text/turtle' --data-urlencode 'query@construct.rq' http://dbpedia.org/sparql
+
